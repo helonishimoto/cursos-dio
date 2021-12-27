@@ -1,0 +1,1 @@
+- Recriando a interface Netflix de modo responsivo.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex</title>
+</head>
+
+<style>
+    .flex-container{
+        display: flex;
+        border: 1px solid white;
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .items{
+        background-color: coral;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .flex-1{
+        flex: 1;
+        /*grow = 1, shrink = 1 e basis = 0 */
+    }
+
+    .largura{
+        width: 200px;
+      /*  min-width: 250px; */
+    }
+
+    .flex-2{
+        flex: 2;
+        /*grow = 2, shrink = 1 e basis = 0 */
+    }
+</style>
+<body>
+    <p>flex: 1</p>
+    <div class="flex-container">
+        <div class="items flex-1">A</div>
+        <div class="items flex-1">BBB</div>
+        <div class="items flex-1">CCCC</div>
+        <div class="items flex-1">DD</div>
+        <div class="items flex-1">E</div>
+    </div>
+
+    <p>flex: mix</p>
+    <div class="flex-container">
+        <div class="items flex-1">A</div>
+        <div class="items flex-2">BBB</div>
+        <div class="items flex-2">CCCC</div>
+        <div class="items flex-1">DD</div>
+        <div class="items flex-1">E</div>
+    </div>
+
+    <p>whidth ignorado - basis zero</p>
+    <div class="flex-container">
+        <div class="items flex-1 largura">A</div>
+        <div class="items flex-2 largura">BBB</div>
+        <div class="items flex-2 largura">CCCC</div>
+        <div class="items flex-1 largura">DD</div>
+        <div class="items flex-1 largura">E</div>
+    </div>
+</body>
+</html>
